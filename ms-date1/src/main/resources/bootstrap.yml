@@ -1,0 +1,10 @@
+server:
+  port: 8895
+
+spring:
+  application:
+    name: dateinfo
+  cloud:
+    config:
+      uri: http://localhost:8888
+      failFast: true     

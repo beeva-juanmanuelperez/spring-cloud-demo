@@ -1,0 +1,12 @@
+dateinfo:
+  numdays: 0
+service:
+  date: ${random.value}
+
+eureka:
+  instance:
+    metadataMap:
+      instanceId: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

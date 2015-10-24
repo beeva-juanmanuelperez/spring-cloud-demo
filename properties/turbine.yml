@@ -1,0 +1,32 @@
+info:
+  component: Turbine
+
+PREFIX:
+
+endpoints:
+  restart:
+    enabled: true
+  shutdown:
+    enabled: true
+
+server:
+  port: 1234
+
+turbine:
+  amqp:
+    port: 2222
+management:
+  port: 4321
+
+logging:
+  level:
+    root: INFO
+    com.netflix.discovery: 'OFF'
+    # org.springframework.integration: DEBUG
+
+eureka:
+  instance:
+    leaseRenewalIntervalInSeconds: 2
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

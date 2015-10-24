@@ -1,0 +1,12 @@
+server:
+  port: 8888
+
+spring:
+   application:
+      name: configsrv
+   cloud:
+      config:
+         server:
+            git:
+              uri: file:/home/jefe/Source/bbva-msdemo/repository
+            defaultLabel: master

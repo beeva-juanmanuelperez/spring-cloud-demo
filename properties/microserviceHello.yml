@@ -1,0 +1,10 @@
+server:
+  port: 9200
+
+myprops:
+  alias: CENTRO INNOVACION 2
+
+eureka:
+   client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
