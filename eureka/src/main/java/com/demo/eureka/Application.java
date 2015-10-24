@@ -5,11 +5,15 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 
+/**
+ * Spring Boot main class.
+ * @author Juan Manuel Pérez Rodríguez
+ */
 @SpringBootApplication
 @EnableEurekaServer
-public class EurekaApp
+public class Application
 {
    public static void main(String[] args) {
-      new SpringApplicationBuilder(EurekaApp.class).web(true).run(args);
+      new SpringApplicationBuilder(Application.class).web(true).run(args);
    }
 }

@@ -1,6 +1,0 @@
-server:
-  port: 8989
-
-spring:
-  application:
-    name: zuul
