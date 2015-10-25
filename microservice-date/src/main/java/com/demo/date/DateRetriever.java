@@ -12,20 +12,14 @@ public class DateRetriever {
 	@Value("${dateinfo.numdays}")
     private Integer numDays;
 
-	@HystrixCommand(fallbackMethod="retrieveFallbackDateinfo")
+	@HystrixCommand(fallbackMethod="dateInfoFallback")
 	public String dateInfo() {
-		
 		DateTime now = DateTime.now();
 		return now.minusDays(numDays).toDate().toString();
-	
 	}
 
-	
-	
-	public String retrieveFallbackDateinfo() {
+	public String dateInfoFallback() {
 		DateTime now = DateTime.now();
 		return now.minusYears(15).toDate().toString();
 	}
-	
-	
 }

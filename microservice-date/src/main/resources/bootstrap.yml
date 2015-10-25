@@ -1,6 +1,6 @@
 spring:
   application:
-    name: dateinfo
+    name: microservice-date
   cloud:
     config:
       uri: http://localhost:8888

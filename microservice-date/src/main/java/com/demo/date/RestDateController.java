@@ -7,7 +7,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.demo.date.DateRetriever;
 
-
+/**
+ * Controller class for microservice
+ */
 @RestController
 public class RestDateController {
 	

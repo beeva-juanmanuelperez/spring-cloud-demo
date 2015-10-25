@@ -5,11 +5,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
+/**
+ * Spring Boot main class.
+ * @author Juan Manuel Pérez Rodríguez
+ */
 @SpringBootApplication
 @EnableEurekaClient
 @EnableZuulProxy
-public class ZuulServer {
+public class Application {
 	public static void main( String[] args ){
-	      SpringApplication.run(ZuulServer.class, args);
+	      SpringApplication.run(Application.class, args);
 	   }
 }

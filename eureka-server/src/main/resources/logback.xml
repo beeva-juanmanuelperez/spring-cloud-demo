@@ -11,9 +11,12 @@
             <evaluator>
                 <matcher>
                     <Name>matcher1</Name>
-                    <regex>No URLs will be polled</regex>
+                    <regex>Can't get a response from</regex>
                 </matcher>
-
+                <matcher>
+                    <Name>matcher2</Name>
+                    <regex>was unable to refresh its cache!</regex>
+                </matcher>
                 <expression>matcher1.matches(formattedMessage)</expression>
             </evaluator>
             <OnMismatch>NEUTRAL</OnMismatch>

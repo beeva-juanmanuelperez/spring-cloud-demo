@@ -9,7 +9,8 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>ms-date2</artifactId>
+    <artifactId>microservice-date</artifactId>
+    <name>Spring Cloud Demo - Date microservice</name>
 
     <dependencies>
         <dependency>
@@ -32,5 +33,6 @@
 			<groupId>joda-time</groupId>
 			<artifactId>joda-time</artifactId>
 		</dependency>
+        
     </dependencies>
 </project>
