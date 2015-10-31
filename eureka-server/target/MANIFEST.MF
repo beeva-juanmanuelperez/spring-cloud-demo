@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: Spring Cloud Demo - Eureka server
+Implementation-Version: 1.0-SNAPSHOT
+Implementation-Vendor-Id: com.jmpr.pocs
+Build-Jdk: 1.8.0_45
+Built-By: juanmanuel
+Created-By: IntelliJ IDEA
+Main-Class: ${start-class}
+
