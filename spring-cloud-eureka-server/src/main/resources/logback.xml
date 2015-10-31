@@ -7,6 +7,7 @@
                 %d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n
             </pattern>
         </encoder>
+    <!--
         <filter class="ch.qos.logback.core.filter.EvaluatorFilter">
             <evaluator>
                 <matcher>
@@ -22,6 +23,7 @@
             <OnMismatch>NEUTRAL</OnMismatch>
             <OnMatch>DENY</OnMatch>
         </filter>
+-->
     </appender>
 
     <root level="INFO">
