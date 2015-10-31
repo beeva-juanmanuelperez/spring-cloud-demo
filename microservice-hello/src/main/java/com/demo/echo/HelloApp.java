@@ -1,4 +1,4 @@
-package com.demo.microserviceHello;
+package com.demo.echo;
 
 
 import lombok.Data;

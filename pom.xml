@@ -11,14 +11,15 @@
     <version>1.0-SNAPSHOT</version>
 
     <modules>
-        <module>config-server</module>
-        <module>eureka-server</module>
-        <module>zuul</module>
+        <module>spring-cloud-config-server</module>
+        <module>spring-cloud-eureka-server</module>
+        <module>spring-cloud-zuul</module>
         <module>ms-demo-client</module>
-        <module>ms-hello</module>
+        <module>microservice-hello</module>
         <module>ms-location</module>
         <module>hystrix-dashboard</module>
         <module>microservice-date</module>
+        <module>microservice-echo</module>
         <module>turbine</module>
     </modules>
 

@@ -1,4 +1,4 @@
-package com.demo.microserviceHello.lombock;//package com.demo.microserviceHello.lombock;
+package com.demo.echo.lombock;//package com.demo.microserviceHello.lombock;
 //
 //import org.springframework.boot.context.properties.ConfigurationProperties;
 //import org.springframework.stereotype.Component;
