@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @EnableEurekaClient
 @RestController
-@EnableConfigurationProperties(MyProps.class)
+@EnableConfigurationProperties(Properties.class)
 @RefreshScope
 public class HelloApp
 {
@@ -27,21 +27,22 @@ public class HelloApp
 	private Service service;
 	
 	@Autowired
-	private MyProps props;
+	private Properties properties;
 
-	@Value("${myprops.alias}")
-    String alias;
+	@Value("${remoteProperties.myRemoteProperty}")
+    String remoteProperty;
 	
 	@Bean
 	@RefreshScope
 	public Service service(){
-		return new  Service(props.getName());
+		return new  Service(properties.getName());
 	}
 	
 	@RequestMapping("/")
     public String home() {
-       
-		return "HELLO "+service.getName()+"!" + " , WE ARE WITH " + alias;
+        return "<h1>Hello World!</h1>" +
+                "<p>This is microservice " + service.getName() + ", it loaded properties from config server:<p>" +
+                "<ul><li>remoteProperties.myRemoteProperty = " + remoteProperty + "</li></ul>";
     }
 	
     public static void main( String[] args )
@@ -53,12 +54,14 @@ public class HelloApp
 @Data
 @RequiredArgsConstructor
 class Service{
-    private final String name ;
-    private Service(){name="UNKNOWN";}
+    private final String name;
+    private Service(){
+        name="microservice-hello";
+    }
 }
  
 @Data
-@ConfigurationProperties("myprops")
-class MyProps{
-    private  String name = "WORLD";
+@ConfigurationProperties("localProperties")
+class Properties {
+    private String name = "microservice-hello";
 }
