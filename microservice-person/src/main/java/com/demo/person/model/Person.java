@@ -6,6 +6,7 @@ package com.demo.person.model;
 public class Person {
     private String name;
     private String surname;
+    private String location;
     private int age;
 
     public Person() {
@@ -15,6 +16,7 @@ public class Person {
         name = builder.name;
         surname = builder.surname;
         age = builder.age;
+        location = builder.location;
     }
 
     public int getAge() {
@@ -41,9 +43,18 @@ public class Person {
         this.surname = surname;
     }
 
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
+
     public static class PersonBuilder {
         private String name;
         private String surname;
+        private String location;
         private int age;
 
         public PersonBuilder withName(String name) {
@@ -61,6 +72,11 @@ public class Person {
             return this;
         }
 
+        public PersonBuilder withLocation(String location) {
+            this.location = location;
+            return this;
+        }
+
         public Person build() {
             return new Person(this);
         }
@@ -72,6 +88,7 @@ public class Person {
                 "age=" + age +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
+                ", location='" + location + '\'' +
                 '}';
     }
 }

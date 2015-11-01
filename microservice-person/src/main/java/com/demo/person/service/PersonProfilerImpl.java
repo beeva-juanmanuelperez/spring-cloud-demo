@@ -20,25 +20,37 @@ public class PersonProfilerImpl implements PersonProfiler {
 
     @Override
     public Person createPerson() {
-        List<String> namePool = properties.getNames();
-        List<String> surnamePool = properties.getSurnames();
+        if (properties.getName() != null && properties.getSurname() != null) {
 
-        if (namePool == null || namePool.isEmpty()) {
-            namePool = Arrays.asList("Unknown");
+            return new Person.PersonBuilder()
+                    .withAge(properties.getAge())
+                    .withName(properties.getName())
+                    .withSurname(properties.getSurname())
+                    .withLocation(properties.getLocation())
+                    .build();
+        } else {
+            List<String> namePool = properties.getNamePool();
+            List<String> surnamePool = properties.getSurnamePool();
+
+            if (namePool == null || namePool.isEmpty()) {
+                namePool = Arrays.asList("Unknown");
+            }
+
+            if (surnamePool == null || namePool.isEmpty()) {
+                surnamePool = Arrays.asList("Unknown");
+            }
+
+            Random random = new Random();
+            int randomNamePosition = random.nextInt(namePool.size());
+            int randomSurnamePosition = random.nextInt(surnamePool.size());
+
+            return new Person.PersonBuilder()
+                    .withAge(random.nextInt(53) + 18)
+                    .withLocation("Unknown")
+                    .withName(namePool.get(randomNamePosition))
+                    .withSurname(surnamePool.get(randomSurnamePosition))
+                    .build();
+
         }
-
-        if (surnamePool == null || namePool.isEmpty()) {
-            surnamePool = Arrays.asList("Unknown");
-        }
-
-        Random random = new Random();
-        int randomNamePosition = random.nextInt(namePool.size());
-        int randomSurnamePosition = random.nextInt(surnamePool.size());
-
-        return new Person.PersonBuilder()
-                .withAge(random.nextInt(53) + 18)
-                .withName(namePool.get(randomNamePosition))
-                .withSurname(surnamePool.get(randomSurnamePosition))
-                .build();
     }
 }

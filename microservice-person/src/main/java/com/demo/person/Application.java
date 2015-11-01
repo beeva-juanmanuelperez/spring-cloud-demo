@@ -48,7 +48,8 @@ public class Application
         return "<h1>" +
                 person.getName() + " " +
                 person.getSurname() + "</h1>" +
-                "<p><strong>Age</strong> " + person.getAge() + " years old</p>"
+                "<p><strong>Age</strong> " + person.getAge() + " years old</p>" +
+                "<p><strong>Location</strong> " + person.getLocation() + "</p>"
         ;
     }
 	

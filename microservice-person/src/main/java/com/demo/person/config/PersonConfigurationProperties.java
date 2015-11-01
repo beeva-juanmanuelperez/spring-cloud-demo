@@ -11,31 +11,58 @@ import java.util.List;
 @Configuration
 @ConfigurationProperties(prefix = "person")
 public class PersonConfigurationProperties {
-    private List<String> names;
-    private List<String> surnames;
-    private String test;
+    private List<String> namePool;
+    private List<String> surnamePool;
+    private String name;
+    private String surname;
+    private String location;
+    private int age;
 
-    public List<String> getNames() {
-        return names;
+    public String getLocation() {
+        return location;
     }
 
-    public void setNames(List<String> names) {
-        this.names = names;
+    public void setLocation(String location) {
+        this.location = location;
     }
 
-    public List<String> getSurnames() {
-        return surnames;
+    public String getName() {
+        return name;
     }
 
-    public void setSurnames(List<String> surnames) {
-        this.surnames = surnames;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getTest() {
-        return test;
+    public List<String> getNamePool() {
+        return namePool;
     }
 
-    public void setTest(String test) {
-        this.test = test;
+    public void setNamePool(List<String> namePool) {
+        this.namePool = namePool;
+    }
+
+    public String getSurname() {
+        return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
+    }
+
+    public List<String> getSurnamePool() {
+        return surnamePool;
+    }
+
+    public void setSurnamePool(List<String> surnamePool) {
+        this.surnamePool = surnamePool;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 }
