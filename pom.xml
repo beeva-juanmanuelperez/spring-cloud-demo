@@ -14,13 +14,15 @@
         <module>spring-cloud-config-server</module>
         <module>spring-cloud-eureka-server</module>
         <module>spring-cloud-zuul</module>
+        <module>microservice-echo</module>
+        <module>microservice-uuid-generator</module>
+        <module>microservice-person</module>
+
         <module>ms-demo-client</module>
         <module>microservice-hello</module>
         <module>ms-location</module>
         <module>hystrix-dashboard</module>
         <module>microservice-date</module>
-        <module>microservice-echo</module>
-        <module>microservice-uuid-generator</module>
         <module>turbine</module>
     </modules>
 
