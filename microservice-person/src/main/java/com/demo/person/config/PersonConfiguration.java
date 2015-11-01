@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
  * @author BBVA Open Platform Development Team
  */
 @Configuration
-@RibbonClient(name = "customRibbonClient")
+@RibbonClient(name = "customRibbonClient", configuration = CustomRibbonClientConfiguration.class)
 public class PersonConfiguration {
     @Bean
     public PersonProfiler personProfiler() {
