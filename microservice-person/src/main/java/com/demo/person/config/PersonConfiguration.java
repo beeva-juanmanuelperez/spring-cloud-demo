@@ -3,7 +3,8 @@ package com.demo.person.config;
 import com.demo.person.model.Person;
 import com.demo.person.service.PersonProfiler;
 import com.demo.person.service.PersonProfilerImpl;
-import org.springframework.cloud.netflix.ribbon.RibbonClient;
+import com.netflix.loadbalancer.IRule;
+import com.netflix.loadbalancer.RandomRule;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -11,7 +12,6 @@ import org.springframework.context.annotation.Configuration;
  * @author BBVA Open Platform Development Team
  */
 @Configuration
-@RibbonClient(name = "customRibbonClient", configuration = CustomRibbonClientConfiguration.class)
 public class PersonConfiguration {
     @Bean
     public PersonProfiler personProfiler() {
@@ -21,5 +21,16 @@ public class PersonConfiguration {
     @Bean
     public Person person() {
         return personProfiler().createPerson();
+    }
+
+    /**
+     * To change the Ribbon Load Balancing Rule, we just need to define a Bean with an implementation of IRule.
+     * Care: this bean is used globally for all ribbon clients.
+     *
+     * @return
+     */
+    @Bean
+    public IRule ribbonRule() {
+        return new RandomRule();
     }
 }
