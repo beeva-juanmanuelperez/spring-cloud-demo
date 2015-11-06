@@ -1,0 +1,10 @@
+server:
+  port: 9999
+
+spring:
+  application:
+    name: microservice-sidecar-bridge
+
+sidecar:
+  port: 3000
+  health-uri: http://localhost:${sidecar.port}/health
