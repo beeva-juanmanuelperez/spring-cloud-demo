@@ -17,6 +17,15 @@ public class PersonConfigurationProperties {
     private String surname;
     private String location;
     private int age;
+    private String uuidSourceName;
+
+    public String getUuidSourceName() {
+        return uuidSourceName;
+    }
+
+    public void setUuidSourceName(String uuidSourceName) {
+        this.uuidSourceName = uuidSourceName;
+    }
 
     public String getLocation() {
         return location;

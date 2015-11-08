@@ -30,5 +30,5 @@ spring:
       config:
          server:
             native:
-              searchLocations: file:/home/juanmanuel/Desarrollo/intellij/spring-cloud-demo-properties
+              searchLocations: file:Z:\temp\git\spring-cloud-demo-properties
 # *****************************************

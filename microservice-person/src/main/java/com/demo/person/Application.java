@@ -11,6 +11,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -45,21 +46,16 @@ public class Application
     @Autowired
     private PersonConfigurationProperties properties;
 
-    @RequestMapping("/")
-    public String home(@RequestParam(required = false) String text) {
-        String domain = "unknown";
-
-        String results = restTemplate.getForObject("http://" + invokedMicroservice, String.class);
+    @RequestMapping(value = "/", produces = MediaType.APPLICATION_JSON_VALUE)
+    public Person home(@RequestParam(required = false) String text) {
+        if (person.getUuid() == null) {
+            String uuid= restTemplate.getForObject("http://" + invokedMicroservice, String.class);
+            person.setUuid(uuid);
+        }
 
         LOGGER.info("This person is " + person);
 
-        return "<h1>" +
-                person.getName() + " " +
-                person.getSurname() + "</h1>" +
-                "<p><strong>Age</strong> " + person.getAge() + " years old</p>" +
-                "<p><strong>Location</strong> " + person.getLocation() + "</p>" +
-                "<p><strong>Request id</strong> " + results + "</p>"
-        ;
+        return person;
     }
 	
     public static void main( String[] args )
