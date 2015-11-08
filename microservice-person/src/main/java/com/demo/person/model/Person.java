@@ -1,7 +1,7 @@
 package com.demo.person.model;
 
 /**
- * @author Juan Manuel Pérez Rodríguez
+ * @author BEEVA
  */
 public class Person {
     private String name;

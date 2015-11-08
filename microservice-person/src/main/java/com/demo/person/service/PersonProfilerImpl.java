@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * @author Juan Manuel Pérez Rodríguez
+ * @author BEEVA
  */
 @Service
 public class PersonProfilerImpl implements PersonProfiler {

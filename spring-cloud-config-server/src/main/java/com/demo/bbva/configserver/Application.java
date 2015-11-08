@@ -6,7 +6,7 @@ import org.springframework.cloud.config.server.EnableConfigServer;
 
 /**
  * Spring Boot main class.
- * @author Juan Manuel Pérez Rodríguez
+ * @author BEEVA
  */
 @SpringBootApplication
 @EnableConfigServer

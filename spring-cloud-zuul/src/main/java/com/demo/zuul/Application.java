@@ -7,7 +7,7 @@ import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
 /**
  * Spring Boot main class.
- * @author Juan Manuel Pérez Rodríguez
+ * @author BEEVA
  */
 @SpringBootApplication
 @EnableEurekaClient
