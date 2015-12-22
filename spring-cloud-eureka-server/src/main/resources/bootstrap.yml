@@ -1,4 +1,4 @@
-# YAML Configuration file
+# YAML configuration file for Spring Cloud Eureka
 
 spring:
   application:

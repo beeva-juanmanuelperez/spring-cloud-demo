@@ -18,7 +18,7 @@ This is a proof of concept for Spring Cloud. Covered features:
 
 ## Notes
 
-I recommend to execute bootstrap applications with memory restrictions to reduce resources usage.
+It is recommended to execute bootstrap applications with memory restrictions to reduce resources usage.
 
 Use the following jvm parameters:
 

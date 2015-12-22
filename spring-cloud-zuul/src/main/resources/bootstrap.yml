@@ -1,3 +1,5 @@
+# YAML configuration file for Spring Cloud Zuul
+
 spring:
   application:
     name: zuul
