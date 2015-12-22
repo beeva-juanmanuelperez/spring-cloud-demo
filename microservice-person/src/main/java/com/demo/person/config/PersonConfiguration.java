@@ -22,15 +22,4 @@ public class PersonConfiguration {
     public Person person() {
         return personProfiler().createPerson();
     }
-
-    /**
-     * To change the Ribbon Load Balancing Rule, we just need to define a Bean with an implementation of IRule.
-     * Care: this bean is used globally for all ribbon clients.
-     *
-     * @return
-     */
-    @Bean
-    public IRule ribbonRule() {
-        return new RandomRule();
-    }
 }

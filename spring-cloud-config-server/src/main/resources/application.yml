@@ -3,32 +3,32 @@
 # GIT backed configuration
 # Uncomment section below
 # *****************************************
-# server:
-#  port: 8888
-#spring:
-#   application:
-#      name: config-server
-#   cloud:
-#      config:
-#         server:
-#            git:
-#             uri: https://github.com/jmperez81/spring-cloud-demo-properties.git
-#            defaultLabel: develop
-# *****************************************
-
-# Local file system configuration
-# Uncomment section below and update your path
-# *****************************************
 server:
   port: 8888
 spring:
-   profiles:
-      active: native
    application:
       name: config-server
    cloud:
       config:
          server:
-            native:
-              searchLocations: file:Z:\temp\git\spring-cloud-demo-properties
+            git:
+              uri: https://github.com/jmperez81/spring-cloud-demo-properties.git
+              defaultLabel: master
+# *****************************************
+
+# Local file system configuration
+# Uncomment section below and update your path
+# *****************************************
+#server:
+#  port: 8888
+#spring:
+#   profiles:
+#      active: native
+#   application:
+#      name: config-server
+#   cloud:
+#      config:
+#         server:
+#            native:
+#              searchLocations: file:Z:\temp\git\spring-cloud-demo-properties
 # *****************************************
