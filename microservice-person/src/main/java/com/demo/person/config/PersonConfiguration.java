@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @author BBVA Open Platform Development Team
+ * @author Juan Manuel Pérez Rodríguez
  */
 @Configuration
 public class PersonConfiguration {
