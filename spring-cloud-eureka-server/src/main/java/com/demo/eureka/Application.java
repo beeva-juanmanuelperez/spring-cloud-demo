@@ -7,7 +7,7 @@ import org.springframework.cloud.netflix.eureka.server.EnableEurekaServer;
 
 /**
  * Spring Boot main class.
- * @author Juan Manuel Pérez Rodríguez
+ * @author BEEVA
  */
 @SpringBootApplication
 @EnableEurekaServer

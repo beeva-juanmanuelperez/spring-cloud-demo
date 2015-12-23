@@ -20,6 +20,14 @@
         <module>microservice-sidecar-bridge</module>
     </modules>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -58,5 +66,4 @@
             <version>1.1.1</version>
         </dependency>
     </dependencies>
-
 </project>
