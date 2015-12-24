@@ -11,12 +11,16 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class ZuulConfiguration {
     /**
-     * This RibbonClient overrides the default one. We include a non-default IRule for Load Balancing here.
+     * This RibbonClient overrides the default one.
+     * We include a non-default IRule for Load Balancing here.
      *
      * @return
      */
+
+    /**
     @Bean
     public IRule ribbonRule() {
         return new RandomRule();
     }
+    */
 }
