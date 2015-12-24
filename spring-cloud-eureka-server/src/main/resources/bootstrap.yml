@@ -1,5 +1,9 @@
 # YAML configuration file for Spring Cloud Eureka
 
+# You can define log level for specific packages
+#logging.level.com.netflix: DEBUG
+#logging.level.org.springframework: DEBUG
+
 spring:
   application:
     name: eureka-server
@@ -7,3 +11,6 @@ spring:
 cloud:
     config:
       uri: http://localhost:8888    # Config server location
+ribbon:
+  client:
+    name: ribbonClient
