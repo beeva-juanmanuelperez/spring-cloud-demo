@@ -1,8 +1,8 @@
 # YAML configuration file for Spring Cloud Eureka
 
-# You can define log level for specific packages
-#logging.level.com.netflix: DEBUG
-#logging.level.org.springframework: DEBUG
+# Log level management for packages
+# logging.level.com.netflix: DEBUG
+# logging.level.org.springframework: DEBUG
 
 spring:
   application:
