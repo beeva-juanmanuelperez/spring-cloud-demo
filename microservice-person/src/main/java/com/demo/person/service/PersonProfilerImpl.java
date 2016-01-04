@@ -28,13 +28,6 @@ public class PersonProfilerImpl implements PersonProfiler {
     public Person createPerson() {
         String uuid = null;
 
-        // TODO Why can't we invoke a remote microservice from here?
-//        try {
-//            uuid= restTemplate.getForObject("http://" + properties.getUuidSourceName(), String.class);
-//        } catch (Exception e) {
-//            LOGGER.warn("Could not initialize UUID for person");
-//        }
-
         if (properties.getName() != null && properties.getSurname() != null) {
 
             return new Person.PersonBuilder()

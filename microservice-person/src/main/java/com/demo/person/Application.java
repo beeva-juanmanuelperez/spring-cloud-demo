@@ -17,8 +17,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
-import java.net.InetAddress;
-
 @SpringBootApplication
 @EnableEurekaClient
 @RestController
@@ -29,7 +27,7 @@ public class Application
 
     /**
      * This instance of RestTemplate is annotated with @LoadBalanced, so it will automatically
-     * use Ribbon to find microservices registered in Eureka directly from its id
+     * use Ribbon to find microservices registered in Eureka directly from its identifier
      */
     @Autowired @LoadBalanced
     RestTemplate restTemplate;
@@ -41,15 +39,12 @@ public class Application
     private int port;
 
     @Value("${microservice.uuid-generator}")
-    String invokedMicroservice;
-
-    @Autowired
-    private PersonConfigurationProperties properties;
+    String uuidGeneratorName;
 
     @RequestMapping(value = "/", produces = MediaType.APPLICATION_JSON_VALUE)
     public Person home(@RequestParam(required = false) String text) {
         if (person.getUuid() == null) {
-            String uuid= restTemplate.getForObject("http://" + invokedMicroservice, String.class);
+            String uuid= restTemplate.getForObject("http://" + uuidGeneratorName, String.class);
             person.setUuid(uuid);
         }
 
