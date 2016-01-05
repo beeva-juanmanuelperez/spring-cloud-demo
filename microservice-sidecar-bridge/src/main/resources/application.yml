@@ -5,6 +5,8 @@ spring:
   application:
     name: microservice-sidecar-bridge
 
+# Here is where we link the bridge application with the actual microservice
 sidecar:
-  port: 3000
-  health-uri: http://localhost:${sidecar.port}/health
+  port: 3000    # Note how the bridge application assumes that the microservice is located on the same host, so it only
+                # needs to know the port
+  health-uri: http://localhost:${sidecar.port}/health # This endpoint is mandatory for Eureka's microservice registration

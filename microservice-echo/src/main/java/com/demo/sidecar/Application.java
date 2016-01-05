@@ -1,4 +1,4 @@
-package com.demo.uuidgenerator;
+package com.demo.sidecar;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
