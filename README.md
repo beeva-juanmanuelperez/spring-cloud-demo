@@ -6,20 +6,26 @@ This is a proof of concept for Spring Cloud. Covered features:
 - Eureka
 - Zuul
 - Ribbon
-- Hystrix
-- Hystrix Dashboard
-- Turbine
+- Sidecar
 
 ## Used languages and tools
 
 - Java 1.7
 - Maven
-- Bootstrap
+- Spring Boot
 
-## Notes
+## How do I execute this demo?
 
-It is recommended to execute bootstrap applications with memory restrictions to reduce resources usage.
+The project has several maven modules. Each of one is configured to generate an autoexecutable .jar (through spring-boot-maven plugin), that you can run in 3 different ways:
 
-Use the following jvm parameters:
+- Using your favorite IDE. Depending on the IDE, you will have to follow different steps (just google it :)
 
--Xmx128m -Xms128m
+- Using java (command line) [Recommended]. If your computer doesn't have lots of memory, consider to restrict memory usage for every microservice, as follows.
+```bash
+java -jar <name>.jar -Xmx128m -Xms128m
+```
+
+- Using maven (command line), inside the module directory
+```bash
+mvn spring-boot:run
+```
