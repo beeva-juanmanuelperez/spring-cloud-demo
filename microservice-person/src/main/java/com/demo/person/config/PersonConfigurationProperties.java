@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import java.util.List;
 
 /**
- * @author BBVA Open Platform Development Team
+ * @author BEEVA
  */
 @Configuration
 @ConfigurationProperties(prefix = "person")
