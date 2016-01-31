@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.jmpr.pocs</groupId>
+    <groupId>com.beeva.formacion</groupId>
     <artifactId>spring-cloud-demo</artifactId>
     <name>Spring Cloud Demo</name>
     <packaging>pom</packaging>
@@ -14,10 +14,17 @@
         <module>spring-cloud-config-server</module>
         <module>spring-cloud-eureka-server</module>
         <module>spring-cloud-zuul</module>
+        <module>spring-cloud-hystrix-dashboard</module>
         <module>microservice-echo</module>
         <module>microservice-uuid-generator</module>
         <module>microservice-person</module>
         <module>microservice-sidecar-bridge</module>
+        <module>microservice-client</module>
+        <module>microservice-personal-1</module>
+        <module>microservice-personal-2</module>
+        <module>microservice-postal</module>
+        <module>microservice-salary</module>
+        <module>spring-cloud-turbine</module>
     </modules>
 
     <build>

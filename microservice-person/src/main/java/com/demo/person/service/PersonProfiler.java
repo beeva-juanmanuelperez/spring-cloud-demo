@@ -5,7 +5,7 @@ import com.demo.person.model.Person;
 import java.util.List;
 
 /**
- * @author BBVA Open Platform Development Team
+ * @author BEEVA
  */
 public interface PersonProfiler {
     Person createPerson();
