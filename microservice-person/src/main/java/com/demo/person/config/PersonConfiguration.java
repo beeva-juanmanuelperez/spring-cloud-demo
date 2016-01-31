@@ -30,10 +30,13 @@ public class PersonConfiguration {
      *
      * @return
      */
+
+    /**
     @Bean
     public IRule ribbonRule() {
         return new RandomRule();
     }
+    */
 
 }
 
