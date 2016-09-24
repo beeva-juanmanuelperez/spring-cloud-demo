@@ -1,6 +1,6 @@
 # YAML configuration file for Spring Cloud Config Server
 
-# GIT backed configuration
+# Remote GIT backed configuration
 # Uncomment section below and update your git url
 # *****************************************
 server:
@@ -14,6 +14,22 @@ spring:
             git:
               uri: https://github.com/beeva-juanmanuelperez/spring-cloud-demo-properties.git
               defaultLabel: master
+# *****************************************
+
+# Local GIT repository
+# Uncomment section below and update your path
+# *****************************************
+#server:
+#  port: 8888
+#spring:
+#  application:
+#    name: config-server
+#  cloud:
+#    config:
+#      server:
+#        git:
+#          uri: file:/home/juanmanuelperez/Desarrollo/intellij/spring-cloud-demo-properties
+#          defaultLabel: master
 # *****************************************
 
 # Local file system configuration
@@ -30,5 +46,5 @@ spring:
 #      config:
 #         server:
 #            native:
-#              searchLocations: file:/home/juanmanuel/Desarrollo/intellij/spring-cloud-demo-properties
+#              searchLocations: file:/home/juanmanuelperez/Desarrollo/intellij/spring-cloud-demo-properties
 # *****************************************
