@@ -29,7 +29,7 @@ public class Application
      * This instance of RestTemplate is annotated with @LoadBalanced, so it will automatically
      * use Ribbon to find microservices registered in Eureka directly from its identifier
      */
-    @Autowired @LoadBalanced
+    @Autowired
     RestTemplate restTemplate;
 
     @Autowired
@@ -42,7 +42,7 @@ public class Application
     String uuidGeneratorName;
 
     @RequestMapping(value = "/", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Person home(@RequestParam(required = false) String text) {
+    public Person home(@RequestParam(required = false) boolean generateId) {
         if (person.getUuid() == null) {
             String uuid= restTemplate.getForObject("http://" + uuidGeneratorName, String.class);
             person.setUuid(uuid);

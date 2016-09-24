@@ -3,17 +3,17 @@
 # Remote GIT backed configuration
 # Uncomment section below and update your git url
 # *****************************************
-server:
-  port: 8888
-spring:
-   application:
-      name: config-server
-   cloud:
-      config:
-         server:
-            git:
-              uri: https://github.com/beeva-juanmanuelperez/spring-cloud-demo-properties.git
-              defaultLabel: master
+#server:
+#  port: 8888
+#spring:
+#   application:
+#      name: config-server
+#   cloud:
+#      config:
+#         server:
+#            git:
+#              uri: https://github.com/beeva-juanmanuelperez/spring-cloud-demo-properties.git
+#              defaultLabel: master
 # *****************************************
 
 # Local GIT repository
@@ -35,16 +35,16 @@ spring:
 # Local file system configuration
 # Uncomment section below and update your path
 # *****************************************
-#server:
-#  port: 8888
-#spring:
-#   profiles:
-#      active: native
-#   application:
-#      name: config-server
-#   cloud:
-#      config:
-#         server:
-#            native:
-#              searchLocations: file:/home/juanmanuelperez/Desarrollo/intellij/spring-cloud-demo-properties
+server:
+  port: 8888
+spring:
+   profiles:
+      active: native
+   application:
+      name: config-server
+   cloud:
+      config:
+         server:
+            native:
+              searchLocations: file:/home/juanmanuelperez/Desarrollo/intellij/spring-cloud-demo-properties
 # *****************************************

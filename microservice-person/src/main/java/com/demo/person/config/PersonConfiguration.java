@@ -5,14 +5,22 @@ import com.demo.person.service.PersonProfiler;
 import com.demo.person.service.PersonProfilerImpl;
 import com.netflix.loadbalancer.IRule;
 import com.netflix.loadbalancer.RandomRule;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.client.RestTemplate;
 
 /**
  * @author Juan Manuel Pérez Rodríguez
  */
 @Configuration
 public class PersonConfiguration {
+    @Bean
+    @LoadBalanced
+    public RestTemplate restTemplate() {
+        return new RestTemplate();
+    }
+
     @Bean
     public PersonProfiler personProfiler() {
         return new PersonProfilerImpl();
@@ -31,12 +39,10 @@ public class PersonConfiguration {
      * @return
      */
 
-    /**
     @Bean
     public IRule ribbonRule() {
         return new RandomRule();
     }
-    */
 
 }
 
